@@ -1,0 +1,19 @@
+<h1 align="center">Formation Full-Stack</h1>
+
+<h2>session1: SringBoot</h2>
+<ul>
+	<li>Couche MVC</li>
+	<li>Couche Data</li>
+	<li>Couche Secuirity</li>
+	<li>Couche RestApi</li>
+	
+</ul>
+<h2>session2: Angular</h2>
+<h2>session3: MicroServices</h2>
+
+<h3>List des etudiant</h3>
+<ul>
+	<li th:each="name:${names}" ></li>
+</ul>
+
+<a href="/welcome">Welcome</a>

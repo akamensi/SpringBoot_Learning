@@ -1,0 +1,25 @@
+package com.aka.ams.controllers;
+
+public class Provider {
+	
+	public String name;
+	public String adress;
+	public String phone;
+	
+	public Provider(String name, String adress, String phone) {
+		super();
+		this.name = name;
+		this.adress = adress;
+		this.phone = phone;
+	}
+
+	@Override
+	public String toString() {
+		return "Provider [name=" + name + ", adress=" + adress + ", phone=" + phone + "]";
+	}
+	
+	
+	
+	
+
+}

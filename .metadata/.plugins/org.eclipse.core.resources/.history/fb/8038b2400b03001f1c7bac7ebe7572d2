@@ -1,0 +1,10 @@
+package com.aka.ams.controllers;
+
+public class ProviderController {
+	
+	public String welcome()
+	{
+		return "Hello Spring";
+	}
+
+}

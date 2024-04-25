@@ -1,0 +1,4 @@
+<h1 align="center">List Of providers</h1>
+<lu>
+	<li th:each="provider:${pro}" th:text="${provider}"></li>
+</lu>

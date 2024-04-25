@@ -1,0 +1,25 @@
+package com.aka.ams.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller //pour la classe devient un Controller qui gere les routes de routage dans l'app web
+public class ProviderController {
+	// une action
+	@RequestMapping("/welcome") // pour que "/welcome soit un route
+	@ResponseBody // il affiche resultat du return en browser
+	public String welcome()
+	{
+		return "<h1>Hello Spring<h1>";
+	}
+	
+	// autre action
+	@RequestMapping("/details")
+	@ResponseBody
+	public String details()
+	{
+		return "<h2> Hello MVC Layer<H2>";
+	}
+
+}
