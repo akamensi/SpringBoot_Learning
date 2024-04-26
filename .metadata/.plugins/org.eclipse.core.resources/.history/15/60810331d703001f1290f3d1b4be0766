@@ -1,0 +1,25 @@
+Provider Name est <p th:text="${uName}"></p>
+<br>
+Votre adress est <p th:text="${uAdress}"></p>
+<br>
+Votre adress est <p th:text="${uPhone}"></p>
+
+<table border="1" class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td th:text="${uName}"></td>
+      <td th:text="${uAdress}"></td>
+      <td th:text="${uPhone}"></td>
+    </tr>
+
+  </tbody>
+</table>

@@ -1,0 +1,5 @@
+Provider Name est <p th:text="${uName}"></p>
+<br>
+Votre adress est <p th:text="${uAdress}"></p>
+<br>
+Votre adress est <p th:text="${uPhone}"></p>

@@ -1,0 +1,5 @@
+<link rel="stylesheet" language="text/css" th:href="@{/css/style.css}">
+<h1 alighn="center">Page Articale</h1>
+<h2>Autre Articale</h2>
+<a href="/provider/details">details</a>
+<a href="/provider/welcome">welcome</a>

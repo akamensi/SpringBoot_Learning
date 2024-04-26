@@ -7,11 +7,18 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller //pour la classe devient un Controller qui gere les routes de routage dans l'app web
+@RequestMapping("/provider")
 public class ProviderController {
+	
+	public static List<Provider> providers = new ArrayList<>();
 	// une action
 	@RequestMapping("/welcome") // pour que "/welcome soit un route
 	//@ResponseBody // il affiche resultat du return en browser
@@ -43,7 +50,48 @@ public class ProviderController {
 		providers.add(new Provider("Evertek", "Tunisia", "55554466" ));
 		model.addAttribute("pro", providers);
 		return "provider/list";
-		
+		}
+	
+	@PostMapping("/email")
+	//@ResponseBody
+	public String getEmail(Model model, @RequestParam("mail")String userEmail, @RequestParam("name")String userName)
+	{
+		model.addAttribute("userName", userName);
+		model.addAttribute("userEmail", userEmail);
+		return "provider/user";
+		//return"Votre nom est : "+userName+" et votre email est : "+userEmail;
 	}
+	
+
+	
+	@GetMapping("/add")
+	public String addProvider(Model model)
+	{
+		Provider provider = new Provider();
+		//Provider provider = new Provider("Lumiere","Bouargoub","98774826");
+		model.addAttribute("provider", provider);
+		return "provider/addProvider";
+	}
+	
+	@PostMapping("/add")
+	//@ResponseBody
+	public String addProvider(Provider provider)
+	{
+				providers.add(provider);
+		//return "provider/listProvider";
+		return "redirect:list";
+	}
+	
+	@GetMapping("/list")
+	public String listProvider(Model model)
+	{
+		//Provider provider = new Provider();
+		
+		model.addAttribute("providers", providers);
+		return "provider/listProvider";
+	}
+
+	
+	
 
 }

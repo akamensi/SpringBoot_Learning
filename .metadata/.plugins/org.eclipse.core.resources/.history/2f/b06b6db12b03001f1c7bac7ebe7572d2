@@ -1,0 +1,20 @@
+<h1 align="center">List Of providers</h1>
+<lu>
+	<li th:each="provider:${pro}" th:text="${provider}"></li>
+</lu>
+
+<table align="center" border="1">
+	<tr><th>Name</th><th>Adress</th><th>Phone</th></tr>
+	<tr th:each="provider:${pro}">
+		<td th:text="${provider.name}"></td>
+		<td th:text="${provider.adress}"></td>
+		<td th:text="${provider.phone}"></td>
+	</tr>
+	
+</table>
+
+<a href="/articale/welcome">articale</a>
+<br>
+<a href="/provider/welcome">welcome</a>
+<br>
+<a href="/provider/details">details</a>

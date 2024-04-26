@@ -2,9 +2,9 @@ package com.aka.ams.controllers;
 
 public class Provider {
 	
-	public String name;
-	public String adress;
-	public String phone;
+	private String name;
+	private String adress;
+	private String phone;
 	
 	public Provider(String name, String adress, String phone) {
 		super();
@@ -12,6 +12,50 @@ public class Provider {
 		this.adress = adress;
 		this.phone = phone;
 	}
+	
+	
+
+	public Provider() {
+		super();
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public String getAdress() {
+		return adress;
+	}
+
+
+
+	public void setAdress(String adress) {
+		this.adress = adress;
+	}
+
+
+
+	public String getPhone() {
+		return phone;
+	}
+
+
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+
 
 	@Override
 	public String toString() {

@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+<form th:object="${provider}" th:action="@{/provider/add}" method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Provider Name</label>
+    <input th:field="*{provider.name}" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Adress</label>
+    <input th:field="*{provider.adress}" type="text" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Phone</label>
+    <input th:field="*{provider.phone}" type="text" class="form-control" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn btn-primary">Send</button>
+</form>
